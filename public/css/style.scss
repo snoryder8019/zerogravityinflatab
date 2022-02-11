@@ -1,3 +1,355 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+$primaryRed:rgba(180,49,39,1);
+$primaryBlue:rgba(35,36,93,1);
+$primaryGreen:rgba(90, 145, 97,1);
+$primaryYellow:rgba(207,182,58,1);
+$slate:rgba(76,76,76,.2);
+
+//lightmode light
+$textColorPrimary:black;
+$textColorPrimaryReverse:white;
+//lightmode dark
+//$backgroundPrimary:rgba(255,255,255,.7);
+$backgroundPrimary:$primaryGreen;
+$backgroundPrimaryReverse:black;
+
+//color mixes
+$primaryRed8:rgba(180,49,39,.8);
+$primaryBlue8:rgba(35,36,93,.8);
+$primaryGreen8:rgba(90, 145, 97,.8);
+$primaryYellow8:rgba(207,182,58,.8);
+
+$primaryRed5:rgba(180,49,39,.5);
+$primaryBlue5:rgba(35,36,93,.5);
+$primaryGreen5:rgba(90, 145, 97,.5);
+$primaryYellow5:rgba(207,182,58,.5);
+
+$primaryRed2:rgba(180,49,39,.2);
+$primaryBlue2:rgba(35,36,93,.2);
+$primaryGreen2:rgba(90, 145, 97,.2);
+$primaryYellow2:rgba(207,182,58,.2);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@font-face{
+	font-family: "modak";
+	src:url("../fonts/Modak-Regular.ttf");
+}
+@font-face{
+	font-family: "titan";
+	src:url("../fonts/TitanOne-Regular.ttf");
+}
+@font-face{
+	font-family: "openSans";
+	src:url("../fonts/OpenSans.ttf");
+}
+@mixin lightmode(){
+    color:$textColorPrimary;
+   // background-color: $slate;
+
+
+}
+@mixin darkmode(){
+    color:$textColorPrimaryReverse;
+   // background-color: $backgroundPrimaryReverse;
+   
+}
+
+body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.title{
+    color:white;
+    font-size: 6rem;
+    font-stretch: semi-expanded;
+    font-weight: 100;
+    font-family: "modak";
+    text-align: center;
+    @media screen and(max-width:480px){
+       font-size:3rem;
+    }
+}
+.subtitle{
+    text-align: center;
+    color:white;
+    padding:0%;
+    font-size: 3.5rem;
+}
+p{
+    
+    font-size:3.5rem;
+    font-family: "openSans";
+    font-weight: 600;
+    background-color: rgba(255,255,255,.9);
+    margin-bottom: 15%;
+    padding:3%;
+    margin: 2%;
+    @media screen and(max-width:480px){
+        font-size:2rem;
+    
+
+     }
+}
+.callGreet{
+   // min-height: 100vh;
+    min-width: 100vw;;
+}
+@mixin contactButton{
+    min-height: 100px;
+    max-width: 74%;
+    margin-left: 10%;
+   
+    text-align: center;
+    border: 20px solid transparent;
+    border-top-color: $primaryBlue;
+    border-inline-start-color: $primaryGreen;
+    border-inline-end-color: $primaryRed;
+    border-bottom-color: $primaryYellow;
+    font-family: "modak";
+    font-size: 6rem;
+    background-color: rgba(255,255,255,1)
+}
+#callNow{
+    margin-top: 75%;
+   @include contactButton();
+}
+#contactNow{
+    margin-top: 5%;
+    @include contactButton();
+}
+#inventoryNow{
+    margin-top:5%;
+    @include contactButton();
+}
+//lightmode arguments (future)
+//lightmode
+.mainContent {
+@include lightmode();
+padding:3%;
+@media screen and (max-width:480px){
+    max-width: 50%;
+    margin-left: 25%;
+}
+}
+.footer{
+    text-align: center;
+    @include lightmode();
+  
+
+    min-width: 100vw;
+    min-height: 12%;
+}
+.mainContainer{
+    margin-top: 10%;
+    //background: linear-gradient(to bottom , white , $primaryYellow);
+
+}
+//darkmode
+.mainContentDark{
+@include darkmode();
+}
+.mainImg{
+  //  position: absolute;
+    margin:0;
+    padding: 0;
+    max-width: 100%;;
+    @media screen and (max-width:480px){
+        max-width:40%;
+    }
+}
+.mainImg0{
+    //  position: absolute;
+      margin:2%;
+      padding: 0;
+      max-width: 65%;
+      border:5px solid white;
+      float: right;
+  }
+#logoDiv{
+    position: relative;
+    min-height:20vh;
+  //background-color: rgb(174, 206, 236);
+  @media screen and (max-width:480px){
+    max-width: 50%;
+    min-width: 0;
+    margin-left: 25%;
+}
+}
+
+@mixin logoMix(){
+    padding: 0;
+    margin:0;
+    position: absolute;
+    max-width: 95%;
+    filter: brightness(1.6)
+   }
+#zg0{
+        @include logoMix();
+top:-5%;
+left:2%;
+
+animation: fade-in 2.9s ease-out 0s 1;
+@media screen and(max-width:400px){
+    top :-16%;
+}
+@media screen and(max-width:825px){
+    top :-26%;
+
+}
+    }
+#zg1{
+        @include logoMix();
+top:35%;
+left:4%;
+animation: fade-in 3.2s ease-out 0s 1;
+
+@media screen and (max-width:1300px) {
+    top:49%;
+}
+    }
+
+@keyframes fade-in{
+    0%{opacity: 0;transform: translateY(-15px);}
+    40%{opacity: 0;transform: translateY(-15px)}
+100%{opacity: 1;transform: translateY(0px)}
+}
+
+.mainContent{
+    animation: fade-in 4.2s ease-out 0s 1;
+    
+}
+#menu0,#menu1, #menu2, #menu3, #greeting{
+    position: relative;
+    
+}
+
+
+#menuButton{}
+.buttonContainer{
+    z-index: 5;;
+    position: fixed;
+    min-height:3%;
+    min-width: 115px;
+    bottom:7%;
+    left:10%;
+      @media screen and (max-width:400px){
+        min-width:75px;
+        min-height:51px;
+    }
+}
+.burger{
+    position: absolute;
+   // background-color: $primaryYellow;
+    border: 2px solid black;
+    border-radius:15px;
+   // min-height: 12px;
+    min-width: 100%;
+}
+
+@keyframes colorSome{
+    0%{background-color:$primaryRed}
+    25%{background-color:$primaryBlue}
+    50%{background-color:$primaryGreen}
+    100%{background-color:$primaryYellow}
+}
+@mixin burgButt(){
+
+}
+$burgHeight: 23%;
+#burgTop{
+    min-height: $burgHeight;
+    animation: colorSome 3.2s ease-out 0s infinite;
+    @include burgButt();
+    transform: translateY(226%)
+}
+#burgMid{
+    min-height: $burgHeight;
+    animation: colorSome 2.2s ease-out 0s infinite;
+    @include burgButt();
+    transform: translateY(0%)
+}
+#burgBottom{
+    min-height: $burgHeight;
+    animation: colorSome 2.8s ease-out 0s infinite;
+    @include burgButt();
+    transform: translateY(-226%);
+  
+}
+
+.menuPageDiv{
+    display: none;
+    //background-color: white;
+    position: fixed;
+    min-width: 100vw;
+    min-height:100vh;
+    top:0;
+    left:0;
+    margin:0;
+   // padding:4%;
+
+}
+
+#menuPage{
+    color: white;
+    z-index:4;
+    position: fixed;
+    top: 0;
+   
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $primaryBlue8;
+    transform: translateX(-100vw);
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+    transform-style: preserve-3d;
+
+}
+.menuOptionDiv{
+    margin:50% 10% 10% 10%;
+    text-align: center;
+    li{
+        font-family: "modak";
+        font-weight: 300;
+
+        font-size: 5rem;
+        text-decoration: none;
+        list-style: none;
+        @media screen and(max-width:400px){
+            font-size: 3rem;
+           
+        }
+    }
+    @media screen and(max-width:400px){
+        margin:10%;
+       
+    }
+}
+.inventory{
+    padding:5%;
+    border-bottom:$primaryYellow;
+    background-color: white;
+
+}
+.pricing{
+    font-size: 3rem;
+    color:$primaryGreen;
+}
+#bkgShade{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+   // background-color: rgba(255,255,255,.5);
+
+}
+#bkgImg0{
+    width:314vw;
+    position: fixed;
+    top:0%;
+    left:-74%;
+    z-index: -2;
+    filter: brightness(.6);
+    transform: translateX(100px),translateY(100px),scale(1.1);
+}
