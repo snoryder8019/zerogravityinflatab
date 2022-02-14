@@ -46,8 +46,47 @@ p {
   padding: 3%;
   margin: 2%;
 }
-@media screen and (max-width: 480px) {
-  p {
+@media screen and (min-width:480px) and (max-width:767px) {
+  p p {
+    font-size: 1.6rem;
+  }
+  p h1 {
+    font-size: 5rem;
+  }
+  p h2 {
+    font-size: 5.5rem;
+  }
+}
+@media screen and (min-width:767px) and (max-width:1280px) {
+  p p {
+    font-size: 3rem;
+  }
+  p h1 {
+    font-size: 4rem;
+  }
+  p h2 {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (min-width:1280px) and (max-width:1800px) {
+  p p {
+    font-size: 1.8rem;
+  }
+  p h1 {
+    font-size: 3rem;
+  }
+  p h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width:1880px) {
+  p p {
+    font-size: 2rem;
+  }
+  p h1 {
+    font-size: 2rem;
+  }
+  p h2 {
     font-size: 2rem;
   }
 }

@@ -1,0 +1,83 @@
+//CONFIGURE FONTS SIZES
+//paragraph size
+$pMobile:1.6rem;
+$pTablet:3rem;
+$pDesk:1.8rem;
+$pXlrg:2rem;
+//headline 1 size
+$h1Mobile:5rem;
+$h1Tablet:4rem;
+$h1Desk:3rem;
+$h1Xlrg:2rem;
+//headline 2 size
+$h2Mobile:5.5rem;
+$h2Tablet:4.5rem;
+$h2Desk:3rem;
+$h2Xlrg:2rem;
+
+$mobile:"(min-width:480px) and (max-width:767px)";
+$tablet:"(min-width:767px) and (max-width:1280px)";
+$desk:"(min-width:1280px) and (max-width:1800px)";
+$xlrg:"(min-width:1880px)";
+
+@mixin mobile(){
+        p{
+    font-size:$pMobile;
+        }
+        h1{
+    font-size: $h1Mobile;
+        }
+        h2{
+    font-size: $h2Mobile;
+        }
+}
+@mixin tablet(){
+        p{
+    font-size:$pTablet;
+        }
+        h1{
+    font-size: $h1Tablet;
+        }
+        h2{
+    font-size: $h2Tablet;
+        }
+}
+@mixin desk(){
+      p{
+        font-size:$pDesk;
+            }
+            h1{
+        font-size: $h1Desk;
+            }
+            h2{
+        font-size: $h2Desk;
+            }
+}
+@mixin xlrg(){
+    p{
+    font-size:$pXlrg;
+        }
+        h1{
+    font-size: $h1Xlrg;
+        }
+        h2{
+    font-size: $h2Xlrg;
+        }
+    }
+
+    @mixin mediaQuerries(){
+        @media screen and #{$mobile}{
+            @include mobile();
+         }
+         @media screen and #{$tablet}{
+            @include tablet();
+         }
+         @media screen and #{$desk}{
+            @include desk();
+         }
+        @media screen and #{$xlrg}{
+            @include xlrg();
+         }
+    }
+    
+    

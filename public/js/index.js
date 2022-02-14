@@ -13,7 +13,8 @@ const burgTop= document.getElementById('burgTop');
 const burgMid= document.getElementById('burgMid');
 const burgBottom= document.getElementById('burgBottom');
 const menuPages = [greeting,menu0,menu1,menu2,menu3];
-const nowButtons = [callNow,contactNow,inventoryNow];
+const nowButtons = [inventoryNow,callNow,contactNow];
+
 
 function backgroundScroll(){
     console.log('scroll function intitated');
@@ -21,6 +22,7 @@ function backgroundScroll(){
 function listenerAdds(){
     backgroundScroll();
     menuOpen();
+  //  sliderChange();
 }
 function menuOpen(){
 console.log('menuOpen init')
@@ -35,13 +37,10 @@ else{
 }
 function menuOption($zzy){
     console.log('menuOption init')
-    $zzy.style.display="block";
-for (let i =0;i<menuPages.length;i++)
-menuPages[i].style.display="none";
-
-inventoryNow.style.display="none";
-callNow.style.display="none";
-contactNow.style.display="none";
+  
+for (let i =0;i<menuPages.length;i++){
+menuPages[i].style.display="none";}
+$zzy.style.display="block";
 menuOpen();
 }
 function closeOption(){
@@ -51,9 +50,8 @@ function closeOption(){
     }
      for (let i =0;i<menuPages.length;i++){
     menuPages[i].style.display="none";
-    nowButtons[i].style.display="block";
     }
-           
+           greeting.style.display="block";
 }
 
 function invDirect(){
