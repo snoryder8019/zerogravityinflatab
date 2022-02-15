@@ -1,21 +1,26 @@
 //CONFIGURE FONTS SIZES
 //paragraph size
-$pMobile:1.6rem;
+$pMobile:1rem;
 $pTablet:2rem;
-$pDesk:1.8rem;
+$pDesk:1.3rem;
 $pXlrg:2rem;
 //headline 1 size
-$h1Mobile:5rem;
+$h1Mobile:2rem;
 $h1Tablet:3rem;
 $h1Desk:3rem;
 $h1Xlrg:2rem;
 //headline 2 size
-$h2Mobile:5.5rem;
+$h2Mobile:1.5rem;
 $h2Tablet:4.5rem;
 $h2Desk:3rem;
 $h2Xlrg:2rem;
+//span size
+$spanMobile:2rem;
+$spanTablet:2.1rem;
+$spanDesk:2.5rem;
+$spanXlrg:3rem;
 
-$mobile:"(max-width:768px)";
+$mobile:"(max-width:490px)";
 $tablet:"(min-width:768px) and (max-width:1280px)";
 $desk:"(min-width:1280px) and (max-width:1800px)";
 $xlrg:"(min-width:1880px)";
@@ -30,6 +35,9 @@ $xlrg:"(min-width:1880px)";
         h2{
     font-size: $h2Mobile;
         }
+    .pricing{
+           font-size: $spanMobile;
+        }
 }
 @mixin tablet(){
         p{
@@ -40,6 +48,9 @@ $xlrg:"(min-width:1880px)";
         }
         h2{
     font-size: $h2Tablet;
+        }
+        .pricing{
+            font-size:$spanTablet;
         }
 }
 @mixin desk(){
@@ -52,6 +63,9 @@ $xlrg:"(min-width:1880px)";
             h2{
         font-size: $h2Desk;
             }
+            .pricing{
+                font-size:$spanDesk;
+            }
 }
 @mixin xlrg(){
     p{
@@ -63,20 +77,55 @@ $xlrg:"(min-width:1880px)";
         h2{
     font-size: $h2Xlrg;
         }
+        .pricing{
+            font-size:$spanXlrg;
+        }
     }
+@mixin burgQ(){
+    min-width: 8%;
+}
+@mixin imgQ(){
+    .mainImg{
+    max-width: 20%;
+    margin: auto;
+    float: inline-end;
+    }
+}
+@mixin menuQ(){
+    .menuOptionDiv{
+    margin:5%;
+    }
+}
 
+@mixin contentQ(){
+    .mainContent, .inventory{
+        width:50%;
+        margin:0% 25% 0% 25%;
+    }
+}
     @mixin mediaQuerries(){
         @media screen and #{$mobile}{
             @include mobile();
          }
          @media screen and #{$tablet}{
             @include tablet();
+            @include menuQ();
          }
          @media screen and #{$desk}{
             @include desk();
+          @include imgQ();
+          @include menuQ();
+          @include contentQ();
+          @include burgQ();
+            p{text-align: justify;}
          }
         @media screen and #{$xlrg}{
             @include xlrg();
+           @include imgQ();
+           @include menuQ();
+           @include contentQ();
+           @include burgQ();
+            p{text-align: justify;}
          }
     }
     
@@ -112,20 +161,32 @@ $xlrg:"(min-width:1880px)";
 
     @mixin contactButt(){
         @media screen and #{$mobile}{
-     
+    
+      
         }
         @media screen and #{$tablet}{
-              
+          max-width: 50%;
+         //   margin-left: 25%;;  
+         
         }
         @media screen and #{$desk}{
-            max-width: 50%;
-            margin-left: 25%;;
+            max-width: 30%;
+          margin-left: 9%;;
+          margin-top: 2%;;
+          
+            #callUs{display: none;} 
         }
        @media screen and #{$xlrg}{
-        max-width: 50%;
-        margin-left: 25%;;
+       max-width: 30%;
+       margin-left: 9%;;
+       margin-top: 2%;;
+       ;
+      //  margin: 1% 35% 1% 35%;
+        #callUs{display: none;} 
         }
     }
+
+
 
     @mixin logoQuerry(){
         @media screen and #{$mobile}{
@@ -136,11 +197,11 @@ $xlrg:"(min-width:1880px)";
         margin-left: 25%;
         }
         @media screen and #{$desk}{
-            max-width: 50%;
-            margin-left: 25%;
+            max-width: 30%;
+            margin-left: 35%;
         }
        @media screen and #{$xlrg}{
-        max-width: 50%;
-        margin-left: 25%;;
+        max-width: 30%;
+        margin-left: 35%;;
         }
     }

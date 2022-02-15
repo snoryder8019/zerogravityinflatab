@@ -1,4 +1,4 @@
-$burgHeight: 23%;
+$burgHeight: 83%;
 #burgTop{
     min-height: $burgHeight;
     animation: colorSome 3.2s ease-out 0s infinite;
@@ -23,11 +23,12 @@ $burgHeight: 23%;
 .buttonContainer{
     z-index: 5;;
     position: fixed;
-    min-height:3%;
-    min-width: 115px;
+    min-height:1%;
+    min-width: 100px;
+    max-width:100px;
     bottom:7%;
     left:10%;
-    
+
     }
 
 .burger{
