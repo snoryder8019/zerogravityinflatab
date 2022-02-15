@@ -1,4 +1,6 @@
 @use './mq.scss';
+@use'./buttons.scss';
+@use './menu.scss';
 
 //media querries configured on mq.scss
 //use "@include mq.mqs()" to apply 
@@ -48,44 +50,48 @@ $primaryYellow2:rgba(207,182,58,.2);
 	font-family: "openSans";
 	src:url("../fonts/OpenSans.ttf");
 }
-@mixin lightmode(){
-    color:$textColorPrimary;
-   // background-color: $slate;
-
-
-}
-@mixin darkmode(){
-    color:$textColorPrimaryReverse;
-   // background-color: $backgroundPrimaryReverse;
-   
-}
 
 body{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
    @include mq.mediaQuerries();
 }
-.title{
+
+.mainContainer{
+    margin-top: 10%;
+  }
+
+.mainImg{
+    margin:0;
+    padding: 0;
+    max-width: 100%;;
+           }
+.mainImg0{
+    margin:2%;
+    padding: 0;
+    max-width: 65%;
+    border:5px solid white;
+    float: right;
+      }
+h1{
     color:white;
-    font-size: 6rem;
+ 
     font-stretch: semi-expanded;
     font-weight: 100;
     font-family: "modak";
     text-align: center;
-    @media screen and(max-width:480px){
-       font-size:3rem;
-    }
-}
-.subtitle{
+    &.butt{color: black;}
+      }
+
+h2{
     text-align: center;
     color:white;
     padding:0%;
-    font-size: 3.5rem;
+ 
 }
 
-
 p{
-    font-size:3.5rem;
+  
     font-family: "openSans";
     font-weight: 600;
     background-color: rgba(255,255,255,.9);
@@ -94,129 +100,65 @@ p{
     margin: 2%;
 @include mq.mediaQuerries();
 }
-
 .callGreet{
    // min-height: 100vh;
     min-width: 100vw;;
+    @include mq.cGreet;
 }
-@mixin contactButton{
-    min-height: 100px;
-    max-width: 74%;
-    margin-left: 10%;
-   
-    text-align: center;
-    border: 20px solid transparent;
+@mixin buttonColor(){
     border-top-color: $primaryBlue;
     border-inline-start-color: $primaryGreen;
     border-inline-end-color: $primaryRed;
     border-bottom-color: $primaryYellow;
-    font-family: "modak";
-    font-size: 6rem;
-    background-color: rgba(255,255,255,1)
 }
 #callNow{
-    margin-top: 75%;
-   @include contactButton();
+    margin-top: 35%;
+   @include buttons.contactButton();
+   @include buttonColor();
 }
 #contactNow{
     margin-top: 5%;
-    @include contactButton();
+    @include buttons.contactButton();
+    @include buttonColor();
 }
 #inventoryNow{
     margin-top:5%;
-    @include contactButton();
-}
-//lightmode arguments (future)
-//lightmode
-.mainContent {
-@include lightmode();
-padding:3%;
-@media screen and (max-width:480px){
-    max-width: 50%;
-    margin-left: 25%;
-}
+    @include buttons.contactButton();
+    @include buttonColor();
 }
 .footer{
     text-align: center;
-    @include lightmode();
-  
-
     min-width: 100vw;
     min-height: 12%;
 }
-.mainContainer{
-    margin-top: 10%;
-    //background: linear-gradient(to bottom , white , $primaryYellow);
-
-}
-//darkmode
-.mainContentDark{
-@include darkmode();
-}
-.mainImg{
-  //  position: absolute;
-    margin:0;
-    padding: 0;
-    max-width: 100%;;
-    @media screen and (max-width:480px){
-        max-width:40%;
-    }
-}
-.mainImg0{
-    //  position: absolute;
-      margin:2%;
-      padding: 0;
-      max-width: 65%;
-      border:5px solid white;
-      float: right;
-  }
 #logoDiv{
     position: relative;
     min-height:20vh;
-  //background-color: rgb(174, 206, 236);
-  @media screen and (max-width:480px){
-    max-width: 50%;
-    min-width: 0;
-    margin-left: 25%;
-}
-}
-
+ }
 @mixin logoMix(){
     padding: 0;
-    margin:0;
-    position: absolute;
-    max-width: 95%;
+    margin-left:3%;
+    margin-top:3%;
+    max-width: 92%;
     filter: brightness(1.6)
-   }
+}
 #zg0{
-        @include logoMix();
-top:-5%;
-left:2%;
-
-animation: fade-in 2.9s ease-out 0s 1;
-@media screen and(max-width:400px){
-    top :-16%;
+   
+    @include logoMix();
+    @include mq.logoQuerry();
+    animation: fade-in 2.9s ease-out 0s 1;
 }
-@media screen and(max-width:825px){
-    top :-26%;
-
-}
-    }
+    
 #zg1{
-        @include logoMix();
-top:35%;
-left:4%;
-animation: fade-in 3.2s ease-out 0s 1;
-
-@media screen and (max-width:1300px) {
-    top:49%;
-}
+    @include logoMix();
+    @include mq.logoQuerry();
+    animation: fade-in 3.2s ease-out 0s 1;
     }
 
 @keyframes fade-in{
     0%{opacity: 0;transform: translateY(-15px);}
     40%{opacity: 0;transform: translateY(-15px)}
-100%{opacity: 1;transform: translateY(0px)}
+    100%{opacity: 1;transform: translateY(0px)}
 }
 
 .mainContent{
@@ -229,111 +171,33 @@ animation: fade-in 3.2s ease-out 0s 1;
 }
 
 
-#menuButton{}
-.buttonContainer{
-    z-index: 5;;
-    position: fixed;
-    min-height:3%;
-    min-width: 115px;
-    bottom:7%;
-    left:10%;
-      @media screen and (max-width:400px){
-        min-width:75px;
-        min-height:51px;
-    }
-}
-.burger{
-    position: absolute;
-   // background-color: $primaryYellow;
-    border: 2px solid black;
-    border-radius:15px;
-   // min-height: 12px;
-    min-width: 100%;
-}
-
 @keyframes colorSome{
     0%{background-color:$primaryRed}
     25%{background-color:$primaryBlue}
     50%{background-color:$primaryGreen}
     100%{background-color:$primaryYellow}
 }
-@mixin burgButt(){
-
-}
-$burgHeight: 23%;
-#burgTop{
-    min-height: $burgHeight;
-    animation: colorSome 3.2s ease-out 0s infinite;
-    @include burgButt();
-    transform: translateY(226%)
-}
-#burgMid{
-    min-height: $burgHeight;
-    animation: colorSome 2.2s ease-out 0s infinite;
-    @include burgButt();
-    transform: translateY(0%)
-}
-#burgBottom{
-    min-height: $burgHeight;
-    animation: colorSome 2.8s ease-out 0s infinite;
-    @include burgButt();
-    transform: translateY(-226%);
-  
-}
-
-.menuPageDiv{
-    display: none;
-    //background-color: white;
-    position: fixed;
-    min-width: 100vw;
-    min-height:100vh;
-    top:0;
-    left:0;
-    margin:0;
-   // padding:4%;
-
-}
-
 #menuPage{
-    color: white;
-    z-index:4;
-    position: fixed;
-    top: 0;
-   
-    min-height: 100vh;
-    min-width: 100vw;
     background-color: $primaryBlue8;
-    transform: translateX(-100vw);
-    -webkit-transition-duration: .5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transform-style: preserve-3d;
-
 }
+
+
 .menuOptionDiv{
     margin:50% 10% 10% 10%;
     text-align: center;
     li{
         font-family: "modak";
         font-weight: 300;
-
         font-size: 5rem;
         text-decoration: none;
         list-style: none;
-        @media screen and(max-width:400px){
-            font-size: 3rem;
-           
-        }
-    }
-    @media screen and(max-width:400px){
-        margin:10%;
-       
-    }
+      
+}
 }
 .inventory{
     padding:5%;
     border-bottom:$primaryYellow;
     background-color: white;
-
 }
 .pricing{
     font-size: 3rem;
@@ -346,9 +210,8 @@ $burgHeight: 23%;
     left: 0;
     min-width: 100vw;
     min-height: 100vh;
-   // background-color: rgba(255,255,255,.5);
+  }
 
-}
 #bkgImg0{
     width:314vw;
     position: fixed;

@@ -67,32 +67,16 @@ app.get('/contact',(req, res) => {
 });
 //CONTACT FORM POST
 app.post('/sendData', (req,res) => {
-  fs.appendFile('./views/partials/logs.ejs','<br>'+ showTime+' Contact ****POST ACTION*** Check clent/saved/signups.html '+req.ip, function (err) {
+  fs.appendFile('./contacts/contacts.txt','<br>'+ showTime+' Contact ****POST ACTION*** Check contacts/contacts.txt '+req.ip, function (err) {
       if(err) {throw err};
-      console.log('**New Contact Saved** \r\n'+req.body.fname + ' '+req.body.lname);
+      console.log('**New Contact Saved** \r\n'+req.body.fname + ' '+req.body.email + ' '+ req.body.message);
     });
-  fs.appendFile('./client/saved/logs.ejs', '\r\n'+'  New Submission:\r\n'+Date()+'\r\n'+req.ip+'\r\n'+req.body.fname+'\r\n'+req.body.lname+'\r\n'+req.body.email+'\r\n This lead is interested in '+req.body.userComment, function (err) {
+  fs.appendFile('./contacts/contacts.txt', '\r\n'+'  New Submission:\r\n'+Date()+'\r\n'+req.ip+'\r\n'+req.body.fname + req.body.email+'\r\n COMMENT: '+req.body.message, function (err) {
       if(err) {throw err};
-          res.render('pages/contact_thankyou');
+          res.render('pages/index.ejs');
   });
 });
-app.post('/postBlog', (req,res) => {
-  fs.appendFile('./views/partials/blogs.ejs','file made'+ req.body.title,
-function (err){
-  if(err){throw err};
-  console.log('blog Saved!!')
-})
-  // fs.appendFile('./views/partials/blogs.ejs','<br>'+ showTime+' Contact ****POST ACTION*** Check clent/saved/signups.html '+req.ip,
-  //  function (err) {
-  //     if(err) {throw err};
-  //     console.log('**New Blog Saved** \r\n'+req.body.title + ' '+req.body.imgSelect);
-  //   });
-  // fs.appendFile('./client/saved/blogs.ejs', '\r\n'+'  New Submission:\r\n'+Date()+'\r\n'+req.ip+'\r\n'+req.body.fname+'\r\n'+req.body.lname+'\r\n'+req.body.email+'\r\n This lead is interested in '+req.body.userComment,
-  //  function (err) {
-  //     if(err) {throw err};
-  //         res.render('pages/contact_thankyou');
-  //});
-});
+
 //SET EJS TEMPLATE
   app.set('view engine','ejs');
   //SET SERVER
