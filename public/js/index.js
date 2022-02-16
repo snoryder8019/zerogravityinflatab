@@ -50,16 +50,20 @@ function closeOption(){
     }
      for (let i =0;i<menuPages.length;i++){
     menuPages[i].style.display="none";
+
+    }
+    for(let i=0;i<nowButtons.length;i++){
+        nowButtons[i].style.display="block"; 
     }
            greeting.style.display="block";
 }
 
-function invDirect(){
+function menuDirect($zzy){
 
    console.log('invDirect init')
    for(let i=0;i<nowButtons.length;i++){
        nowButtons[i].style.display="none";
    }
     greeting.style.display="none";
-    menu0.style.display="block";
+    $zzy.style.display="block";
 }
