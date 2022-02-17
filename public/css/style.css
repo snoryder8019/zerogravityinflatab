@@ -28,7 +28,7 @@
   min-width: 100px;
   max-width: 100px;
   bottom: 7%;
-  left: 10%;
+  left: 6%;
 }
 
 .burger {
@@ -208,7 +208,7 @@ a {
 
 .mainImg {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
   max-width: 100%;
   float: right;
 }
