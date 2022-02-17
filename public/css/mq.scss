@@ -1,29 +1,29 @@
 //CONFIGURE FONTS SIZES
 //paragraph size
 $pMobile:1rem;
-$pTablet:2rem;
+$pTablet:1.4rem;
 $pDesk:1.3rem;
-$pXlrg:2rem;
+$pXlrg:1.5rem;
 //headline 1 size
 $h1Mobile:2rem;
-$h1Tablet:3rem;
-$h1Desk:3rem;
+$h1Tablet:2rem;
+$h1Desk:2rem;
 $h1Xlrg:2rem;
 //headline 2 size
 $h2Mobile:1.5rem;
-$h2Tablet:4.5rem;
-$h2Desk:3rem;
+$h2Tablet:2rem;
+$h2Desk:2rem;
 $h2Xlrg:2rem;
 //span size
 $spanMobile:2rem;
 $spanTablet:2.1rem;
-$spanDesk:2.5rem;
+$spanDesk:2rem;
 $spanXlrg:3rem;
 
 $mobile:"(max-width:490px)";
-$tablet:"(min-width:768px) and (max-width:1280px)";
-$desk:"(min-width:1280px) and (max-width:1800px)";
-$xlrg:"(min-width:1880px)";
+$tablet:"(min-width:491px) and (max-width:1280px)";
+$desk:"(min-width:1281px) and (max-width:1880px)";
+$xlrg:"(min-width:1881px)";
 
 @mixin mobile(){
         p{
@@ -56,6 +56,8 @@ $xlrg:"(min-width:1880px)";
 @mixin desk(){
       p{
         font-size:$pDesk;
+        width:50%;
+        
             }
             h1{
         font-size: $h1Desk;
@@ -70,6 +72,7 @@ $xlrg:"(min-width:1880px)";
 @mixin xlrg(){
     p{
     font-size:$pXlrg;
+    width:50%;
         }
         h1{
     font-size: $h1Xlrg;
