@@ -23,7 +23,7 @@ app.use(express.static('css'));
 app.use(express.static('jsFiles'));
 app.use(express.static('partials'));
 
-app.use(require('./routes'));
+//app.use(require('./routes'));
 
 app.post('/sendData', (req,res) => {
   console.log("posts initiated")
