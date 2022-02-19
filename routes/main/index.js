@@ -1,7 +1,5 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
-//router.use('./main', require('./main'))
-
 
 router.post('/sendData', (req,res) => {
     console.log("posts initiated")
@@ -20,7 +18,6 @@ router.post('/sendData', (req,res) => {
       let mailOptions = {
           from:'Your Zero Gravity WebApp!! from '+ req.body.fname + ' from email:'+ req.body.email,
           to:'w2marketing.scott@gmail.com',
-          //to:'zgravityinflatables@gmail.com',
           subject:'A Customer Fiiled out the Contact Form',
           text: req.body.message,
           html:'<h1>Customer Submission: </h1><br><h2>'+req.body.message+'</h2>'
@@ -38,4 +35,4 @@ router.post('/sendData', (req,res) => {
   });
   
 
-  module.exports = router;
+module.exports = router;
