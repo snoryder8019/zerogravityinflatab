@@ -354,7 +354,7 @@ p {
 #callNow {
   color: black;
   box-shadow: inset 0px 2px 15px 5px rgba(0, 0, 0, 0.65);
-  width: 70%;
+  width: 91%;
   padding: 0;
   border-radius: 100px;
   text-align: center;
@@ -375,37 +375,12 @@ p {
   transform: scale(0.9);
   transition-delay: 0.3s;
 }
-@media screen and (min-width:768px) and (max-width:1280px) {
-  #callNow {
-    max-width: 50%;
-  }
-}
-@media screen and (min-width:1280px) and (max-width:1800px) {
-  #callNow {
-    max-width: 30%;
-    margin-left: 9%;
-    margin-top: 2%;
-  }
-  #callNow #callUs {
-    display: none;
-  }
-}
-@media screen and (min-width:1880px) {
-  #callNow {
-    max-width: 30%;
-    margin-left: 9%;
-    margin-top: 2%;
-  }
-  #callNow #callUs {
-    display: none;
-  }
-}
 
 #contactNow {
   margin-top: 5%;
   color: black;
   box-shadow: inset 0px 2px 15px 5px rgba(0, 0, 0, 0.65);
-  width: 70%;
+  width: 91%;
   padding: 0;
   border-radius: 100px;
   text-align: center;
@@ -426,37 +401,12 @@ p {
   transform: scale(0.9);
   transition-delay: 0.3s;
 }
-@media screen and (min-width:768px) and (max-width:1280px) {
-  #contactNow {
-    max-width: 50%;
-  }
-}
-@media screen and (min-width:1280px) and (max-width:1800px) {
-  #contactNow {
-    max-width: 30%;
-    margin-left: 9%;
-    margin-top: 2%;
-  }
-  #contactNow #callUs {
-    display: none;
-  }
-}
-@media screen and (min-width:1880px) {
-  #contactNow {
-    max-width: 30%;
-    margin-left: 9%;
-    margin-top: 2%;
-  }
-  #contactNow #callUs {
-    display: none;
-  }
-}
 
 #inventoryNow {
   margin-top: 5%;
   color: black;
   box-shadow: inset 0px 2px 15px 5px rgba(0, 0, 0, 0.65);
-  width: 70%;
+  width: 91%;
   padding: 0;
   border-radius: 100px;
   text-align: center;
@@ -476,31 +426,6 @@ p {
 #inventoryNow:active {
   transform: scale(0.9);
   transition-delay: 0.3s;
-}
-@media screen and (min-width:768px) and (max-width:1280px) {
-  #inventoryNow {
-    max-width: 50%;
-  }
-}
-@media screen and (min-width:1280px) and (max-width:1800px) {
-  #inventoryNow {
-    max-width: 30%;
-    margin-left: 9%;
-    margin-top: 2%;
-  }
-  #inventoryNow #callUs {
-    display: none;
-  }
-}
-@media screen and (min-width:1880px) {
-  #inventoryNow {
-    max-width: 30%;
-    margin-left: 9%;
-    margin-top: 2%;
-  }
-  #inventoryNow #callUs {
-    display: none;
-  }
 }
 
 .footer {
