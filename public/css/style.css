@@ -156,10 +156,6 @@ body {
   body .menuOptionDiv {
     margin: 5%;
   }
-  body .mainContent, body .inventory {
-    width: 50%;
-    margin: 0% 25% 0% 25%;
-  }
   body p {
     text-align: justify;
   }
@@ -188,10 +184,6 @@ body {
   }
   body .menuOptionDiv {
     margin: 5%;
-  }
-  body .mainContent, body .inventory {
-    width: 50%;
-    margin: 0% 25% 0% 25%;
   }
   body p {
     text-align: justify;
@@ -303,10 +295,6 @@ p, .paraList {
   p .menuOptionDiv, .paraList .menuOptionDiv {
     margin: 5%;
   }
-  p .mainContent, p .inventory, .paraList .mainContent, .paraList .inventory {
-    width: 50%;
-    margin: 0% 25% 0% 25%;
-  }
   p p, .paraList p {
     text-align: justify;
   }
@@ -335,10 +323,6 @@ p, .paraList {
   }
   p .menuOptionDiv, .paraList .menuOptionDiv {
     margin: 5%;
-  }
-  p .mainContent, p .inventory, .paraList .mainContent, .paraList .inventory {
-    width: 50%;
-    margin: 0% 25% 0% 25%;
   }
   p p, .paraList p {
     text-align: justify;

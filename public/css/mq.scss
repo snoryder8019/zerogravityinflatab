@@ -101,10 +101,10 @@ $xlrg:"(min-width:1881px)";
 }
 
 @mixin contentQ(){
-    .mainContent, .inventory{
-        width:50%;
-        margin:0% 25% 0% 25%;
-    }
+    // .mainContent, {
+    //     width:50%;
+    //     margin:0% 25% 0% 25%;
+   // }
 }
     @mixin mediaQuerries(){
         @media screen and #{$mobile}{
