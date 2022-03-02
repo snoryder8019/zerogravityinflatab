@@ -138,6 +138,7 @@ body {
   body p {
     font-size: 1.3rem;
     width: 50%;
+    margin-left: 25%;
   }
   body h1 {
     font-size: 2rem;
@@ -167,6 +168,7 @@ body {
   body p {
     font-size: 1.5rem;
     width: 50%;
+    margin-left: 25%;
   }
   body h1 {
     font-size: 2rem;
@@ -277,6 +279,7 @@ p, .paraList {
   p p, .paraList p {
     font-size: 1.3rem;
     width: 50%;
+    margin-left: 25%;
   }
   p h1, .paraList h1 {
     font-size: 2rem;
@@ -306,6 +309,7 @@ p, .paraList {
   p p, .paraList p {
     font-size: 1.5rem;
     width: 50%;
+    margin-left: 25%;
   }
   p h1, .paraList h1 {
     font-size: 2rem;
@@ -387,6 +391,33 @@ p, .paraList {
   transform: scale(0.9);
   transition-delay: 0.3s;
 }
+@media screen and (min-width:491px) and (max-width:1280px) {
+  #callNow {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
+  #callNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #callNow #call {
+    display: none;
+  }
+}
+@media screen and (min-width:1881px) {
+  #callNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #callNow #callNow {
+    display: none;
+  }
+}
 
 #contactNow {
   margin-top: 5%;
@@ -413,6 +444,33 @@ p, .paraList {
   transform: scale(0.9);
   transition-delay: 0.3s;
 }
+@media screen and (min-width:491px) and (max-width:1280px) {
+  #contactNow {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
+  #contactNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #contactNow #call {
+    display: none;
+  }
+}
+@media screen and (min-width:1881px) {
+  #contactNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #contactNow #callNow {
+    display: none;
+  }
+}
 
 #inventoryNow {
   margin-top: 5%;
@@ -438,6 +496,33 @@ p, .paraList {
 #inventoryNow:active {
   transform: scale(0.9);
   transition-delay: 0.3s;
+}
+@media screen and (min-width:491px) and (max-width:1280px) {
+  #inventoryNow {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
+  #inventoryNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #inventoryNow #call {
+    display: none;
+  }
+}
+@media screen and (min-width:1881px) {
+  #inventoryNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #inventoryNow #callNow {
+    display: none;
+  }
 }
 
 .footer {

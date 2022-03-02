@@ -21,4 +21,5 @@
     transform: scale(.9);
     transition-delay: .3s;
 }
+@include mq.contactButt();
 }
