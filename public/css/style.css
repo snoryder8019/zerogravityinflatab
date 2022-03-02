@@ -8,17 +8,62 @@
   animation: colorSome 3.2s ease-out 0s infinite;
   transform: translateY(226%);
 }
+@media screen and (min-width:491px) and (max-width:1280px) {
+  #burgTop {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
+  #burgTop {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) {
+  #burgTop {
+    min-width: 70%;
+  }
+}
 
 #burgMid {
   min-height: 83%;
   animation: colorSome 2.2s ease-out 0s infinite;
   transform: translateY(0%);
 }
+@media screen and (min-width:491px) and (max-width:1280px) {
+  #burgMid {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
+  #burgMid {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) {
+  #burgMid {
+    min-width: 70%;
+  }
+}
 
 #burgBottom {
   min-height: 83%;
   animation: colorSome 2.8s ease-out 0s infinite;
   transform: translateY(-226%);
+}
+@media screen and (min-width:491px) and (max-width:1280px) {
+  #burgBottom {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
+  #burgBottom {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) {
+  #burgBottom {
+    min-width: 70%;
+  }
 }
 
 .buttonContainer {
@@ -132,9 +177,6 @@ body {
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) {
-  body {
-    min-width: 8%;
-  }
   body p {
     font-size: 1.3rem;
     width: 50%;
@@ -157,14 +199,28 @@ body {
   body .menuOptionDiv {
     margin: 5%;
   }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) and (min-width:491px) and (max-width:1280px) {
+  body {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) and (min-width:1281px) and (max-width:1880px) {
+  body {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) and (min-width:1881px) {
+  body {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
   body p {
     text-align: justify;
   }
 }
 @media screen and (min-width:1881px) {
-  body {
-    min-width: 8%;
-  }
   body p {
     font-size: 1.5rem;
     width: 50%;
@@ -187,6 +243,23 @@ body {
   body .menuOptionDiv {
     margin: 5%;
   }
+}
+@media screen and (min-width:1881px) and (min-width:491px) and (max-width:1280px) {
+  body {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) and (min-width:1281px) and (max-width:1880px) {
+  body {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) and (min-width:1881px) {
+  body {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) {
   body p {
     text-align: justify;
   }
@@ -273,9 +346,6 @@ p, .paraList {
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) {
-  p, .paraList {
-    min-width: 8%;
-  }
   p p, .paraList p {
     font-size: 1.3rem;
     width: 50%;
@@ -298,14 +368,28 @@ p, .paraList {
   p .menuOptionDiv, .paraList .menuOptionDiv {
     margin: 5%;
   }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) and (min-width:491px) and (max-width:1280px) {
+  p, .paraList {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) and (min-width:1281px) and (max-width:1880px) {
+  p, .paraList {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) and (min-width:1881px) {
+  p, .paraList {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
   p p, .paraList p {
     text-align: justify;
   }
 }
 @media screen and (min-width:1881px) {
-  p, .paraList {
-    min-width: 8%;
-  }
   p p, .paraList p {
     font-size: 1.5rem;
     width: 50%;
@@ -328,6 +412,23 @@ p, .paraList {
   p .menuOptionDiv, .paraList .menuOptionDiv {
     margin: 5%;
   }
+}
+@media screen and (min-width:1881px) and (min-width:491px) and (max-width:1280px) {
+  p, .paraList {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) and (min-width:1281px) and (max-width:1880px) {
+  p, .paraList {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) and (min-width:1881px) {
+  p, .paraList {
+    min-width: 70%;
+  }
+}
+@media screen and (min-width:1881px) {
   p p, .paraList p {
     text-align: justify;
   }

@@ -86,9 +86,7 @@ $xlrg:"(min-width:1881px)";
             font-size:$spanXlrg;
         }
     }
-@mixin burgQ(){
-    min-width: 8%;
-}
+
 @mixin imgQ(){
     .mainImg{
     max-width: 20%;
@@ -209,5 +207,23 @@ $xlrg:"(min-width:1881px)";
        @media screen and #{$xlrg}{
         max-width: 30%;
         margin-left: 35%;;
+        }
+    }
+
+
+  
+    
+    @mixin burgQ(){
+        @media screen and #{$mobile}{
+        
+        }
+        @media screen and #{$tablet}{
+            min-width: 70%;
+        }
+        @media screen and #{$desk}{
+            min-width: 70%;
+        }
+       @media screen and #{$xlrg}{
+        min-width: 70%;
         }
     }

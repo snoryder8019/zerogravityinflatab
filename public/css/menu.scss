@@ -1,21 +1,27 @@
+@use './mq.scss';
+
 $burgHeight: 83%;
 #burgTop{
     min-height: $burgHeight;
     animation: colorSome 3.2s ease-out 0s infinite;
    // @include burgButt();
-    transform: translateY(226%)
+       transform: translateY(226%);
+       @include mq.burgQ();
+    
 }
 #burgMid{
     min-height: $burgHeight;
     animation: colorSome 2.2s ease-out 0s infinite;
    // @include burgButt();
-    transform: translateY(0%)
+    transform: translateY(0%);
+    @include mq.burgQ();
 }
 #burgBottom{
     min-height: $burgHeight;
     animation: colorSome 2.8s ease-out 0s infinite;
   //  @include burgButt();
     transform: translateY(-226%);
+    @include mq.burgQ();
   
 }
 
