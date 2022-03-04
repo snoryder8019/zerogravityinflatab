@@ -33,6 +33,4 @@ router.post('/sendData', (req,res) => {
       })
       res.render('pages/success')
   });
-  
-
-module.exports = router;
+  module.exports = router;

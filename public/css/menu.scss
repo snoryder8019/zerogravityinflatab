@@ -71,3 +71,15 @@ $burgHeight: 83%;
     transform-style: preserve-3d;
 
 }
+
+#menuFoot{
+    position: absolute;
+    bottom:3%;
+    text-align: center;
+   width:100%;
+   filter: brightness(90%);
+    a{
+        text-decoration: none;
+        color:yellow;
+    }
+}

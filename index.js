@@ -24,6 +24,7 @@ app.use(express.static(__dirname+'/jsFiles'));
 app.use(express.static(__dirname+'/partials'));
 
 app.use(require('./routes'));
+app.use(require('./routes/links.js'));
 
 
 
