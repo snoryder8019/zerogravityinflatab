@@ -68,7 +68,7 @@ a{
     margin:0;
     padding: 0;
     max-width: 100%;
-    float: right;
+   float: right;
     //@include mq.imgQ;
            }
 .mainImg0{
@@ -96,9 +96,11 @@ h2{
     padding:0%;
  
 }
-
+.greetImg{
+    width:100%;
+}
 p, .paraList{
-  
+  border-radius: 20%;
     font-family: "openSans";
     font-weight: 600;
     background-color: rgba(255,255,255,.9);
@@ -228,4 +230,7 @@ p, .paraList{
     z-index: -2;
     filter: brightness(.6);
     transform: translateX(100px),translateY(100px),scale(1.1);
+}
+.greetImg{
+    
 }

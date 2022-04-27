@@ -187,6 +187,11 @@ body {
   body .menuOptionDiv {
     margin: 5%;
   }
+  body .mainImg {
+    max-width: 40%;
+    margin: auto;
+    float: right;
+  }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) {
   body p {
@@ -204,9 +209,9 @@ body {
     font-size: 2rem;
   }
   body .mainImg {
-    max-width: 20%;
-    margin: auto;
-    float: inline-end;
+    /* max-width: 17%; */
+    /* margin: auto; */
+    /* float: right; */
   }
   body .menuOptionDiv {
     margin: 5%;
@@ -248,9 +253,9 @@ body {
     font-size: 3rem;
   }
   body .mainImg {
-    max-width: 20%;
+    max-width: 40%;
     margin: auto;
-    float: inline-end;
+    float: right;
   }
   body .menuOptionDiv {
     margin: 5%;
@@ -286,10 +291,10 @@ a {
 }
 
 .mainImg {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  float: right;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* max-width: 100%; */
+  /* float: right; */
 }
 
 .mainImg0 {
@@ -356,12 +361,17 @@ p, .paraList {
   p .menuOptionDiv, .paraList .menuOptionDiv {
     margin: 5%;
   }
+  p .mainImg, .paraList .mainImg {
+    max-width: 40%;
+    margin: auto;
+    float: right;
+  }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) {
   p p, .paraList p {
     font-size: 1.3rem;
     width: 50%;
-    margin-left: 25%;
+    margin-left: 15%;
   }
   p h1, .paraList h1 {
     font-size: 2rem;
@@ -373,9 +383,9 @@ p, .paraList {
     font-size: 2rem;
   }
   p .mainImg, .paraList .mainImg {
-    max-width: 20%;
+    max-width: 40%;
     margin: auto;
-    float: inline-end;
+    float: right;
   }
   p .menuOptionDiv, .paraList .menuOptionDiv {
     margin: 5%;
@@ -417,9 +427,9 @@ p, .paraList {
     font-size: 3rem;
   }
   p .mainImg, .paraList .mainImg {
-    max-width: 20%;
+    max-width: 40%;
     margin: auto;
-    float: inline-end;
+    float: right;
   }
   p .menuOptionDiv, .paraList .menuOptionDiv {
     margin: 5%;

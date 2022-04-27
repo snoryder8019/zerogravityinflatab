@@ -89,9 +89,9 @@ $xlrg:"(min-width:1881px)";
 
 @mixin imgQ(){
     .mainImg{
-    max-width: 20%;
+    max-width: 40%;
     margin: auto;
-    float: inline-end;
+    float: right;
     }
 }
 @mixin menuQ(){
@@ -113,6 +113,7 @@ $xlrg:"(min-width:1881px)";
          @media screen and #{$tablet}{
             @include tablet();
             @include menuQ();
+            @include imgQ();
          }
          @media screen and #{$desk}{
             @include desk();
