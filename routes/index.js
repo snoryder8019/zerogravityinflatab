@@ -21,9 +21,9 @@ router.post('/sendData', (req,res) => {
           from:'Your Zero Gravity WebApp!! from '+ req.body.fname + ' from email:'+ req.body.email,
           to:'w2marketing.scott@gmail.com',
           //to:'zgravityinflatables@gmail.com',
-          subject:'A Customer Fiiled out the Contact Form',
+          subject:req.body.fname+' wants the '+req.body.invType+" on: "+req.body.date,
           text: req.body.message,
-          html:'<h1>Customer Submission: </h1><br><h2>'+req.body.message+'</h2>'
+          html:'<h1>Customer Submission from: </h1><br><h2>'+req.body.fname+'</h2><br><h2>from email: </h2>'+req.body.email+'<br><h2>'+req.body.message+'</h2>'
       };
       transporter.sendMail(mailOptions,function(error,info){
           if(error){

@@ -1,15 +1,22 @@
 form{
-    margin-top: 10%;;
+
 }
-input{
+select{
+margin-left:1%;
+}
+input, select{
     font-size: 2rem;
     font-weight: 600;
-    background-color: bisque;
-    width:94%;
+    background-color: white;
+    width:98%;
   height:40px;
     margin-top: 2%;
     text-align: center;
   border:2px dashed black;
+  @media screen and (min-width:700px){
+    width:40%;
+    margin-left: 30%;
+  }
   .submit{
       background-color: white;
   }

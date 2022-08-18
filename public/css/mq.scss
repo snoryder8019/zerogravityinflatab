@@ -56,9 +56,7 @@ $xlrg:"(min-width:1881px)";
 @mixin desk(){
       p{
         font-size:$pDesk;
-        width:50%;
-        margin-left: 15%;
-        
+               
             }
             h1{
         font-size: $h1Desk;
@@ -73,9 +71,7 @@ $xlrg:"(min-width:1881px)";
 @mixin xlrg(){
     p{
     font-size:$pXlrg;
-    width:50%;
-    margin-left: 25%;
-        }
+          }
         h1{
     font-size: $h1Xlrg;
         }
@@ -90,8 +86,8 @@ $xlrg:"(min-width:1881px)";
 @mixin imgQ(){
     .mainImg{
     max-width: 40%;
-    margin: auto;
-    float: right;
+    margin-left: 30%;
+    
     }
 }
 @mixin menuQ(){
@@ -129,8 +125,7 @@ $xlrg:"(min-width:1881px)";
            @include menuQ();
            @include contentQ();
            @include burgQ();
-            p{text-align: justify;}
-         }
+                   }
     }
     
     @mixin callGreetOff(){
