@@ -10,7 +10,7 @@
 $primaryRed:rgba(180,49,39,1);
 $primaryBlue:rgba(35,36,93,1);
 $primaryGreen:rgba(90, 145, 97,1);
-$primaryYellow:rgba(207,182,58,1);
+$primaryYellow:rgb(238, 224, 151);
 $slate:rgba(76,76,76,.2);
 
 //lightmode light
@@ -68,7 +68,7 @@ a{
     margin:0;
     padding: 0;
     max-width: 100%;
-   float: right;
+
     //@include mq.imgQ;
            }
 .mainImg0{
@@ -78,6 +78,17 @@ a{
     border:5px solid white;
     float: right;
    // @include mq.imgQ;
+      }
+      p{
+        width: 86%;
+        margin-left: 3%;
+        background-color:white;
+        padding: 4%;
+        font-weight: 800;
+        border: 4px dotted black;
+        color: $primaryBlue;
+
+
       }
 h1{
     color:white;
@@ -99,7 +110,7 @@ h2{
 .greetImg{
     width:100%;
 }
-p, .paraList{
+.paraList{
   border-radius: 20%;
     font-family: "openSans";
     font-weight: 600;
@@ -119,6 +130,11 @@ p, .paraList{
     border-inline-start-color: $primaryGreen;
     border-inline-end-color: $primaryRed;
     border-bottom-color: $primaryYellow;
+}
+#contactNow{
+    @include buttons.contactButton();
+   @include buttonColor(); 
+   min-height: 40px;
 }
 #callNow{
    // margin-top: 35%;

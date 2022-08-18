@@ -118,21 +118,27 @@
   color: yellow;
 }
 
-form {
-  margin-top: 10%;
+select {
+  margin-left: 1%;
 }
 
-input {
+input, select {
   font-size: 2rem;
   font-weight: 600;
-  background-color: bisque;
-  width: 94%;
+  background-color: white;
+  width: 98%;
   height: 40px;
   margin-top: 2%;
   text-align: center;
   border: 2px dashed black;
 }
-input .submit {
+@media screen and (min-width: 700px) {
+  input, select {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+input .submit, select .submit {
   background-color: white;
 }
 
@@ -189,15 +195,12 @@ body {
   }
   body .mainImg {
     max-width: 40%;
-    margin: auto;
-    float: right;
+    margin-left: 30%;
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) {
   body p {
     font-size: 1.3rem;
-    width: 50%;
-    margin-left: 15%;
   }
   body h1 {
     font-size: 2rem;
@@ -209,9 +212,8 @@ body {
     font-size: 2rem;
   }
   body .mainImg {
-    /* max-width: 17%; */
-    /* margin: auto; */
-    /* float: right; */
+    max-width: 40%;
+    margin-left: 30%;
   }
   body .menuOptionDiv {
     margin: 5%;
@@ -240,8 +242,6 @@ body {
 @media screen and (min-width:1881px) {
   body p {
     font-size: 1.5rem;
-    width: 50%;
-    margin-left: 25%;
   }
   body h1 {
     font-size: 2rem;
@@ -254,8 +254,7 @@ body {
   }
   body .mainImg {
     max-width: 40%;
-    margin: auto;
-    float: right;
+    margin-left: 30%;
   }
   body .menuOptionDiv {
     margin: 5%;
@@ -276,11 +275,6 @@ body {
     min-width: 70%;
   }
 }
-@media screen and (min-width:1881px) {
-  body p {
-    text-align: justify;
-  }
-}
 
 a {
   text-decoration: none;
@@ -291,10 +285,9 @@ a {
 }
 
 .mainImg {
-  /* margin: 0; */
-  /* padding: 0; */
-  /* max-width: 100%; */
-  /* float: right; */
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
 .mainImg0 {
@@ -303,6 +296,16 @@ a {
   max-width: 65%;
   border: 5px solid white;
   float: right;
+}
+
+p {
+  width: 86%;
+  margin-left: 3%;
+  background-color: white;
+  padding: 4%;
+  font-weight: 800;
+  border: 4px dotted black;
+  color: #23245d;
 }
 
 h1 {
@@ -323,7 +326,12 @@ h2 {
   padding: 0%;
 }
 
-p, .paraList {
+.greetImg {
+  width: 100%;
+}
+
+.paraList {
+  border-radius: 20%;
   font-family: "openSans";
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.9);
@@ -332,127 +340,115 @@ p, .paraList {
   margin: 2%;
 }
 @media screen and (max-width:490px) {
-  p p, .paraList p {
+  .paraList p {
     font-size: 1rem;
   }
-  p h1, .paraList h1 {
+  .paraList h1 {
     font-size: 2rem;
   }
-  p h2, .paraList h2 {
+  .paraList h2 {
     font-size: 1.5rem;
   }
-  p .pricing, .paraList .pricing {
+  .paraList .pricing {
     font-size: 2rem;
   }
 }
 @media screen and (min-width:491px) and (max-width:1280px) {
-  p p, .paraList p {
+  .paraList p {
     font-size: 1.4rem;
   }
-  p h1, .paraList h1 {
+  .paraList h1 {
     font-size: 2rem;
   }
-  p h2, .paraList h2 {
+  .paraList h2 {
     font-size: 2rem;
   }
-  p .pricing, .paraList .pricing {
+  .paraList .pricing {
     font-size: 2.1rem;
   }
-  p .menuOptionDiv, .paraList .menuOptionDiv {
+  .paraList .menuOptionDiv {
     margin: 5%;
   }
-  p .mainImg, .paraList .mainImg {
+  .paraList .mainImg {
     max-width: 40%;
-    margin: auto;
-    float: right;
+    margin-left: 30%;
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) {
-  p p, .paraList p {
+  .paraList p {
     font-size: 1.3rem;
-    width: 50%;
-    margin-left: 15%;
   }
-  p h1, .paraList h1 {
+  .paraList h1 {
     font-size: 2rem;
   }
-  p h2, .paraList h2 {
+  .paraList h2 {
     font-size: 2rem;
   }
-  p .pricing, .paraList .pricing {
+  .paraList .pricing {
     font-size: 2rem;
   }
-  p .mainImg, .paraList .mainImg {
+  .paraList .mainImg {
     max-width: 40%;
-    margin: auto;
-    float: right;
+    margin-left: 30%;
   }
-  p .menuOptionDiv, .paraList .menuOptionDiv {
+  .paraList .menuOptionDiv {
     margin: 5%;
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) and (min-width:491px) and (max-width:1280px) {
-  p, .paraList {
+  .paraList {
     min-width: 70%;
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) and (min-width:1281px) and (max-width:1880px) {
-  p, .paraList {
+  .paraList {
     min-width: 70%;
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) and (min-width:1881px) {
-  p, .paraList {
+  .paraList {
     min-width: 70%;
   }
 }
 @media screen and (min-width:1281px) and (max-width:1880px) {
-  p p, .paraList p {
+  .paraList p {
     text-align: justify;
   }
 }
 @media screen and (min-width:1881px) {
-  p p, .paraList p {
+  .paraList p {
     font-size: 1.5rem;
-    width: 50%;
-    margin-left: 25%;
   }
-  p h1, .paraList h1 {
+  .paraList h1 {
     font-size: 2rem;
   }
-  p h2, .paraList h2 {
+  .paraList h2 {
     font-size: 2rem;
   }
-  p .pricing, .paraList .pricing {
+  .paraList .pricing {
     font-size: 3rem;
   }
-  p .mainImg, .paraList .mainImg {
+  .paraList .mainImg {
     max-width: 40%;
-    margin: auto;
-    float: right;
+    margin-left: 30%;
   }
-  p .menuOptionDiv, .paraList .menuOptionDiv {
+  .paraList .menuOptionDiv {
     margin: 5%;
   }
 }
 @media screen and (min-width:1881px) and (min-width:491px) and (max-width:1280px) {
-  p, .paraList {
+  .paraList {
     min-width: 70%;
   }
 }
 @media screen and (min-width:1881px) and (min-width:1281px) and (max-width:1880px) {
-  p, .paraList {
+  .paraList {
     min-width: 70%;
   }
 }
 @media screen and (min-width:1881px) and (min-width:1881px) {
-  p, .paraList {
+  .paraList {
     min-width: 70%;
-  }
-}
-@media screen and (min-width:1881px) {
-  p p, .paraList p {
-    text-align: justify;
   }
 }
 
@@ -490,6 +486,59 @@ p, .paraList {
   }
 }
 
+#contactNow {
+  color: black;
+  box-shadow: inset 0px 2px 15px 5px rgba(0, 0, 0, 0.65);
+  width: 91%;
+  padding: 0;
+  border-radius: 100px;
+  text-align: center;
+  border: 10px solid transparent;
+  font-family: "modak";
+  background-color: white;
+  transform-style: preserve-3d;
+  transition-duration: 0.8s;
+  border-top-color: #23245d;
+  border-inline-start-color: #5a9161;
+  border-inline-end-color: #b43127;
+  border-bottom-color: #eee097;
+  min-height: 40px;
+}
+#contactNow:hover {
+  transform: scale(1.03);
+}
+#contactNow:active {
+  transform: scale(0.9);
+  transition-delay: 0.3s;
+}
+@media screen and (min-width:491px) and (max-width:1280px) {
+  #contactNow {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1880px) {
+  #contactNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #contactNow #call {
+    display: none;
+  }
+}
+@media screen and (min-width:1881px) {
+  #contactNow {
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  #contactNow #callNow {
+    display: none;
+  }
+}
+
 #callNow {
   color: black;
   box-shadow: inset 0px 2px 15px 5px rgba(0, 0, 0, 0.65);
@@ -505,7 +554,7 @@ p, .paraList {
   border-top-color: #23245d;
   border-inline-start-color: #5a9161;
   border-inline-end-color: #b43127;
-  border-bottom-color: #cfb63a;
+  border-bottom-color: #eee097;
 }
 #callNow:hover {
   transform: scale(1.03);
@@ -558,7 +607,7 @@ p, .paraList {
   border-top-color: #23245d;
   border-inline-start-color: #5a9161;
   border-inline-end-color: #b43127;
-  border-bottom-color: #cfb63a;
+  border-bottom-color: #eee097;
 }
 #contactNow:hover {
   transform: scale(1.03);
@@ -611,7 +660,7 @@ p, .paraList {
   border-top-color: #23245d;
   border-inline-start-color: #5a9161;
   border-inline-end-color: #b43127;
-  border-bottom-color: #cfb63a;
+  border-bottom-color: #eee097;
 }
 #inventoryNow:hover {
   transform: scale(1.03);
@@ -746,7 +795,7 @@ p, .paraList {
     background-color: #5a9161;
   }
   100% {
-    background-color: #cfb63a;
+    background-color: #eee097;
   }
 }
 #menuPage {
@@ -770,7 +819,7 @@ p, .paraList {
 
 .inventory {
   padding: 5%;
-  border-bottom: #cfb63a;
+  border-bottom: #eee097;
   background-color: white;
 }
 
